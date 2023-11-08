@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Ladok-calculator",
+    "description": "Calculate your average",
+    "version": "1.0",
+    "permissions": ["activeTab", "declarativeContent", "scripting"],
+    "background": {
+      "service_worker": "service-worker.js"
+    },
+    "content_scripts": [
+      {
+        "js": ["scripts/content-script.js"],
+        "matches": ["https://www.student.ladok.se/student/app/studentwebb/min-utbildning/*"]
+      }
+    ]
+  }
+  
